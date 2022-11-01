@@ -8,6 +8,8 @@ export interface TitleProps {
 	onClick?: () => void;
 }
 
+// No cumple con el principio Open-Closed ya que se debe modificar el componente para agregar un nuevo tipo de título con button o link
+
 const Title: React.FC<TitleProps> = ({title, type, href, buttonText, onClick}) => {
 	return <div className={styles.title}>
 		<h1>{title}</h1>
