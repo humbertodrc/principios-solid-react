@@ -1,14 +1,14 @@
 import {Title} from "./components/Title";
+import { TitleWithButton } from './components/TitleWithButton';
 
 function App() {
-
-  const onCLick = () => {
-    console.log("withButton")
-  }
+	const onCLick = () => {
+		console.log("withButton");
+	};
 
 	return (
 		<div className="App">
-			<Title title='Hola Camada 1 🙂❤' type={'default'}   />
+			<TitleWithButton title="Hola Camada 1 🙂❤" buttonText='button' onClick={ onCLick} />
 		</div>
 	);
 }

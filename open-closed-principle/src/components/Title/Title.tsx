@@ -2,26 +2,16 @@ import React from "react";
 import styles from "./styles/Title.module.css";
 export interface TitleProps {
 	title: string;
-	type:"default" | "withLink" | "withButton";
-	href?: string;
-	buttonText?: string;
-	onClick?: () => void;
+	children: React.ReactNode;
 }
 
-const Title: React.FC<TitleProps> = ({title, type, href, buttonText, onClick}) => {
-	return <div className={styles.title}>
-		<h1>{title}</h1>
-
-		{type === "withLink" && (
-			<div>
-				<a href={href}>{buttonText}</a>
-			</div>
-		)}
-		
-		{type === "withButton" && (
-			<button onClick={onClick}>{buttonText}</button>
-			)}
-	</div>;
+const Title: React.FC<TitleProps> = ({title, children}) => {
+	return (
+		<div className={styles.title}>
+			<h1>{title}</h1>
+			{children}
+		</div>
+	);
 };
 
 export default Title;
