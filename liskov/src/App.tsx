@@ -1,6 +1,6 @@
 import "./App.css";
 import { Button } from './components/Button';
-import { ButtonSize } from './components/ButtonIcon';
+import { ButtonSize } from './components/ButtonSize';
 
 function App() {
 	return (
