@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import TodoType from "./todo.types";
+import TodoType from "../../types/todo.types";
 
 // Single-responsibility principle
 // En el siguiente componente estamos violando el principio SRP
@@ -23,7 +23,7 @@ const TodoList = () => {
 
   const renderTodos = () => {
     return todos.map((todo: TodoType) => {
-      return <li>✅{` Tarefa ${todo.id}: ${todo.title}`}</li>;
+      return <li>✅{` Tarea ${todo.id}: ${todo.title}`}</li>;
     });
   };
 
