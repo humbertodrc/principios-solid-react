@@ -1,10 +1,10 @@
 import React from 'react';
 import { Video } from '../../types/video';
-export interface ThumbnailInterface {
+export interface ThumbnailProps {
 	video: Video;
 }
 
-const Thumbnail : React.FC<ThumbnailInterface> = ({video}) => {
+const Thumbnail : React.FC<ThumbnailProps> = ({video}) => {
 	return <img src={video.coverUrl} style={{marginLeft: "15px"}} />
 };
 
