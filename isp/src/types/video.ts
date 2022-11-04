@@ -4,3 +4,10 @@ export type Video = {
   duration: number;
   coverUrl: string;
 }
+
+export type LiveStream = {
+  id: number;
+  name: string
+  previewUrl: string
+}
+
